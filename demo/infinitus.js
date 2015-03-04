@@ -69,7 +69,7 @@ var tools = {
     getCommonParam: function () {
         var param = new Array();
         param.push({
-            "brand": "iPads", "os": "0", "machineModel": "x86_64", "coreVersion": "8.0", "netType": "WiFi", "appVersion": "2.0.0", "osVersion": "8.0", "screen": "1136x640", "imei": "", "model": "0"
+            "brand": "iPad", "os": "0", "machineModel": "x86_64", "coreVersion": "8.0", "netType": "WiFi", "appVersion": "2.0.0", "osVersion": "8.0", "screen": "1136x640", "imei": "", "model": "0"
         });
 
         return param;

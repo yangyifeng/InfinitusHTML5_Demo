@@ -11,7 +11,7 @@ define(["zepto", // zepto.js 简写路径，定义详见 vendor/cube/js/launcher
                 "": "showTemplate", // 表示地址 hash 为空时，执行 showTemplate 方法
                 "template": "showTemplate" // 表示地址 hash 为”template”时，执行 showTemplate 方法
             },
-            showTemplate: function() { // showTemplate 方法
+            showTemplate: function() {
                 this.changePage(new Template()); // 表示创建一个 Template 视图，覆盖当前视图
             }
         });
