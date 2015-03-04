@@ -29,6 +29,7 @@ cordova.js // js插件，不需要动
 infinitus.js // 封装了一些原生的公共方法，不需要动（包括弹框提示、显示对话框等等）  
 ```  
 #开发说明  
+开发前请先阅读 `InfinitusHTML5开发规范.doc` 文档，并按照文档规范进行开发。
 ##路由设置说明  
 节选自 `com.infinitus.demo/router.js`：  
 ```javascript  
