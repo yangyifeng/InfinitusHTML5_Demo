@@ -196,7 +196,7 @@ cache.clean(sCallback);
 cache.cacheImageWithUrl(sCallback, sImgUrl, sUserInfo);
 
 ```
-###分开设立平板和手机模板逻辑文件  
+##分开设立平板和手机模板逻辑文件  
 因 demo 中的平板和手机模板逻辑文件为同一个（`template.js`），如果需要在两个平台实现不同的逻辑，可以分成两个逻辑文件。在该模块目录下，创建一个 `template_pad.js` （请根据模板具体名称重命名），并修改该目录下的 `router.js` ：
 ```javascript
 define(["zepto", 
