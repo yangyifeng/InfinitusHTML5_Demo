@@ -196,6 +196,35 @@ cache.clean(sCallback);
 cache.cacheImageWithUrl(sCallback, sImgUrl, sUserInfo);
 
 ```
+###分开设立平板和手机模板逻辑文件  
+因 demo 中的平板和手机模板逻辑文件为同一个（`template.js`），如果需要在两个平台实现不同的逻辑，可以分成两个逻辑文件。在该模块目录下，创建一个 `template_pad.js` （请根据模板具体名称重命名），并修改该目录下的 `router.js` ：
+```javascript
+define(["zepto", 
+    "cube/router", 
+    "com.infinitus.demo/template", 
+    "com.infinitus.demo/template_pad"], // template_pad.js
+    function($, CubeRouter, Template, Template_pad) {
+        var context;
+        var Router = CubeRouter.extend({
+            module: "com.infinitus.demo",
+            navigationStack: [],
+            routes: {
+                "": "showTemplate",
+                "template": "showTemplate"
+            },
+            showTemplate: function() {
+                // deviceType 的值为 'pad' （brand 为 'ipad' 时） 或 'phone' （brand 不为 'ipad' 时）
+                // 可在 infinitus.js 里设置 brand 参数
+                if(deviceType == 'pad') { // 平板端
+                    this.changePage(new Template_pad());
+                } else { // 手机端
+                    this.changePage(new Template());
+                }
+            }
+        });
+        return Router;
+    });
+```
 ##调试  
 ###基本说明  
 使用浏览器打开模板目录下的 `index.html` 即可在浏览器对该模板进行调试。  
@@ -387,34 +416,5 @@ define(["zepto", "cube/router", "com.infinitus.shopping/catalog"],
 ```  
 ###创建 CATALOG 模板  
 在模块目录下复制 `template.html`, `template_pad.html`, `template.js` 三个文件，并改名为 `catalog.html`, `catalog_pad.html`, `catalog.js`，然后就可以开始写业务逻辑，或者继续创建更多模板。  
-###分开设立平板和手机模板逻辑文件  
-因 demo 中的平板和手机模板逻辑文件为同一个（`template.js`），如果需要在两个平台实现不同的逻辑，可以分成两个逻辑文件。在该模块目录下，创建一个 `template_pad.js` （请根据模板具体名称重命名），并修改该目录下的 `router.js` ：
-```javascript
-define(["zepto", 
-    "cube/router", 
-    "com.infinitus.demo/template", 
-    "com.infinitus.demo/template_pad"], // template_pad.js
-    function($, CubeRouter, Template, Template_pad) {
-        var context;
-        var Router = CubeRouter.extend({
-            module: "com.infinitus.demo",
-            navigationStack: [],
-            routes: {
-                "": "showTemplate",
-                "template": "showTemplate"
-            },
-            showTemplate: function() {
-                // deviceType 的值为 'pad' （brand 为 'ipad' 时） 或 'phone' （brand 不为 'ipad' 时）
-                // 可在 infinitus.js 里设置 brand 参数
-                if(deviceType == 'pad') { // 平板端
-                    this.changePage(new Template_pad());
-                } else { // 手机端
-                    this.changePage(new Template());
-                }
-            }
-        });
-        return Router;
-    });
-```
 
 （完）
