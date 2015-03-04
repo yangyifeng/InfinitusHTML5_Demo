@@ -407,9 +407,9 @@ define(["zepto",
                 // deviceType 的值为 'pad' （brand 为 'ipad' 时） 或 'phone' （brand 不为 'ipad' 时）
                 // 可在 infinitus.js 里设置 brand 参数
                 if(deviceType == 'pad') { // 平板端
-                    this.changePage(new Template());
-                } else { // 手机端
                     this.changePage(new Template_pad());
+                } else { // 手机端
+                    this.changePage(new Template());
                 }
             }
         });
