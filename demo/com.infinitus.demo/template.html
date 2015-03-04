@@ -1,0 +1,29 @@
+<!--页面内部定义的css样式,只对当前页面起作用-->
+<style type="text/css">
+</style>
+<!-- 不需要写html、body等标签 -->
+<div>
+    <div class="topBar">
+        <div>
+            <div>
+                <button class="goBack">返回</button>
+            </div>
+            <div>
+                手机端模版
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 模板实际位置，根据 data-template 属性找到对应 id 的模板-->
+    <div id="demoContent" data-template="demoTemplate" class="demoContent">
+    </div>
+</div>
+<!-- 载入的模板数据 -->
+<script id="demoTemplate" type="text/html">
+    <div>
+        <img id="demoImg" alt="pic" src="<%=imgUrl%>" />
+        <p><%=message%></p>
+    </div>
+</script>

@@ -1,0 +1,28 @@
+<html>
+ <head>
+ <title>Bootstrap Datepicker</title>
+  <!--<script src="../js/zepto.min.js"></script>-->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ <script src="datepicker.js"></script>
+ <script src="date.format.js"></script>
+ <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+ <link rel="stylesheet" href="datepicker.css">
+ <body style="margin:10px;">
+ <p>Clicked date is: <span id="date-text"></span></p>
+ <input type="text" name="date" id="date-input" value=""/> 
+ <script>
+  $(document).ready(function() {
+    $('#date-input').datepicker();
+
+    $('#date-input').bind('change', function() {
+      var selectedDate = $(this).val();
+      var prettyDate = new Date(selectedDate).format('fullDate');
+      $('#date-text').html(prettyDate);
+    });
+  });
+ </script>
+ <body>
+ 	<h1>http://blog.pamelafox.org/2012/02/datepicker-for-twitter-bootstrap.html</h1>
+ </body>
+</html>
+ 

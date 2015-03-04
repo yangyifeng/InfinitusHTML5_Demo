@@ -1,0 +1,471 @@
+html {
+    background-color: #eeeeee;
+    -webkit-text-size-adjust: none;
+}
+
+@font-face {
+    font-family: YouYuan;
+    src: url("../YouYuan.TTF");
+}
+
+@font-face {
+    font-family: huakang;
+    src: url("../huakang.TTF");
+}
+
+body {
+    font-size: .24rem;
+    line-height: 150%;
+    font-family: YouYuan;
+}
+
+* {
+    font-family: YouYuan;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+img {
+    display: block;
+}
+
+input {
+    border: none;
+    line-height: 150%;
+    padding: 0.03rem;
+    margin: 0rem;
+    font-size: 0.28rem;
+    border-radius: 0rem;
+}
+
+.hidden, .commonHidden {
+    display: none !important;
+}
+
+.flex {
+    display: -webkit-flex;
+}
+
+.flex1 {
+    -webkit-flex: 1;
+}
+
+.flex2 {
+    -webkit-flex: 2;
+}
+
+.box {
+    display: -webkit-box;
+}
+
+
+.flex-box {
+    display: -webkit-box;
+    -webkit-box-flex: 1;
+}
+
+.boxFlex1 {
+    -webkit-box-flex: 1;
+}
+
+.boxFlex2 {
+    -webkit-box-flex: 2;
+}
+
+.middle {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.vmiddle {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+.clear {
+    clear: both;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.topBar {
+    height: 0.88rem;
+    color: white;
+}
+
+    .topBar button {
+        font-size: 0.30rem;
+        line-height: 0.88rem;
+        padding: 0 0.3rem;
+    }
+
+    .topBar button {
+        background-color: transparent;
+        color: white;
+    }
+
+    .topBar > div {
+        z-index: 10;
+        display: -webkit-box;
+        position: fixed;
+        top: 0rem;
+        left: 0rem;
+        right: 0rem;
+        height: 0.88rem;
+        padding: 0rem 0.10rem;
+        background-color: #b98867;
+    }
+
+        .topBar > div > div:nth-child(1) {
+            min-width: 1rem;
+            text-align: left;
+            display: -webkit-box;
+            -webkit-box-align: center;
+        }
+
+        .topBar > div > div:nth-child(2) {
+            -webkit-box-flex: 1;
+            text-align: center;
+            font-size: 0.34rem;
+            line-height: 0.88rem;
+        }
+
+        .topBar > div > div:nth-child(3) {
+            min-width: 0.70rem;
+            text-align: right;
+        }
+
+.topBarHidden {
+    position: absolute !important;
+}
+
+.bottomBar {
+    height: 0.88rem;
+}
+
+    .bottomBar > div {
+        z-index: 10;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        position: fixed;
+        bottom: 0rem;
+        left: 0rem;
+        right: 0rem;
+        height: 0.88rem;
+        background-color: #cccccc;
+        padding: 0rem 0.20rem;
+    }
+
+        .bottomBar > div > div {
+            height: 100%;
+            font-size: 0.28rem;
+            padding-left: 0.1rem;
+        }
+
+    .bottomBar img {
+        height: 100%;
+    }
+
+    .bottomBar button {
+        height: 80%;
+        /*width: 1.80rem;*/
+    }
+
+#btnDeleteAll {
+    width: 2.0rem;
+}
+
+.tab {
+    height: 0.93rem;
+}
+
+    .tab > div {
+        z-index: 10;
+        display: -webkit-box;
+        height: 0.93rem;
+        position: fixed;
+        top: 0.88rem;
+        left: 0rem;
+        right: 0rem;
+    }
+
+        .tab > div > div {
+            width: 50%;
+            -webkit-box-flex: 1;
+            text-align: center;
+            font-size: 0.3rem;
+            line-height: 0.40rem;
+            padding-top: 0.3rem;
+            font-size: 0.3rem;
+            color: #a7a7a7;
+            background: #fff1e8;
+        }
+
+
+    .tab .tab-active {
+        color: #3e3e3e;
+        border-bottom: 0.04rem solid #b98867;
+    }
+
+.font-bold {
+    font-weight: 900;
+}
+
+.font-right {
+    text-align: right;
+}
+
+@-webkit-keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.autoHide {
+    -webkit-animation: hide 0.5s linear 0s 1 normal;
+}
+
+.autoShow {
+    -webkit-animation: show 0.5s linear 0s 1 normal;
+}
+
+
+.button {
+    background-image: -webkit-linear-gradient(top, #ee413f, #bc2826);
+    color: white;
+    border-radius: 0.1rem;
+    padding: 0rem 0.20rem;
+    font-size: 0.30rem;
+    height: 0.60rem;
+    /*width: 1.60rem;*/
+}
+
+    .button:active {
+        background-image: -webkit-linear-gradient(top, #850406, #850406);
+    }
+
+    .button:disabled {
+        background-image: -webkit-linear-gradient(top, #aeaeae, #aeaeae);
+    }
+
+.font22 {
+    font-size: 0.22rem;
+}
+
+.font24 {
+    font-size: 0.24rem;
+}
+
+.font26 {
+    font-size: 0.26rem;
+}
+
+.font28 {
+    font-size: 0.28rem;
+}
+
+.font30 {
+    font-size: 0.30rem;
+}
+
+.font32 {
+    font-size: 0.32rem;
+}
+
+.font36 {
+    font-size: 0.36rem;
+}
+
+.dialogButton {
+}
+
+    .dialogButton:hover {
+        background-color: #ba8867;
+        color: white;
+    }
+
+input[type=checkbox], input[type=radio] {
+    -webkit-appearance: none;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid #ACA8A3;
+    background-color: white;
+    vertical-align: middle;
+}
+
+    input[type=checkbox]:checked, input[type=radio]:checked {
+        background-color: #D40F0B;
+        content: url(images/checked.png);
+    }
+
+    input[type=checkbox]:disabled, input[type=radio]:disabled {
+        background-color: #ACA8A3;
+    }
+
+input[type=checkbox] {
+    border-radius: 0.02rem;
+}
+
+input[type=radio] {
+    border-radius: 0.25rem;
+}
+
+.areaSelect, .select {
+    -webkit-appearance: none;
+    background: url(../com.infinitus.common/images/select.png);
+    background-size: 100% 100%;
+    border: none;
+}
+
+.selectOverlay {
+    background-color: #FFF7F0;
+    border-radius: 0.10rem;
+    font-size: 0.30rem;
+    width: 4.6rem;
+    padding: 0.2rem;
+}
+
+    .selectOverlay > div:nth-child(1) {
+        border-bottom: 1px solid #cccccc;
+        color: #c30d23;
+        font-size: 0.40rem;
+        line-height: 1.17rem;
+        text-align: center;
+    }
+
+    .selectOverlay > div:nth-child(2) {
+        overflow: auto;
+        max-height: 6rem;
+    }
+
+        .selectOverlay > div:nth-child(2) > div {
+            padding: 0rem 0.22rem;
+            font-size: 0.30rem;
+            line-height: 0.78rem;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .selectOverlay > div:nth-child(2) > .active {
+            color: #950000;
+        }
+
+    .selectOverlay > div:nth-child(3) {
+        display: -webkit-box;
+    }
+
+        .selectOverlay > div:nth-child(3) > div {
+            -webkit-box-flex: 1;
+            font-size: 0.3rem;
+            line-height: 0.6rem;
+            text-align: center;
+        }
+
+            .selectOverlay > div:nth-child(3) > div:hover {
+                background-color: #ba8867;
+                color: white;
+            }
+
+.nextPage {
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 1rem;
+    height: 2rem;
+}
+
+.empty {
+    position: fixed;
+    top: 0.75rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    font-size: 0.48rem;
+    color: #A7A7A7;
+    background-color: #EEEEEE;
+}
+
+
+.goBackImg {
+    width: 0.25rem !important;
+    height: 0.4rem !important;
+    position: absolute;
+    top: 0.24rem;
+    left: 0.15rem;
+}
+
+.topBar1 .goBackImg{
+    top: 0.19rem;
+}
+
+.topBar1{
+    display: none;
+}
+
+/*当页面是在我的账户中，呈现左右显示的时候，隐藏标题*/
+@media screen and (min-width: 1024px){
+    .topBar{
+        display: block;
+    }
+    .topBar1{
+        display: none;
+    }
+}
+@media screen and (max-width: 704px){
+    .topBar1{
+        display: block;
+    }
+    .topBar{
+        display: none;
+    }
+    .topBar1 .goBackPad{
+        margin: 0.08rem 0.1rem 0.1rem 0.4rem;
+    }
+}
+
+.topRightFunc{
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    font-size: 0.3rem;
+    background: #eeeeee; 
+}
+.goBackPad{
+    /*width: 1.2rem;*/
+    height: 0.6rem;
+    line-height: 0.6rem;
+    font-size: 0.3rem;
+    color:#5e5e5e;
+    margin: 0.08rem 0.1rem 0.1rem 0.3rem;
+    background: inherit;
+}
+
+.noBackground{
+    background: none !important;
+    border:none !important;
+}

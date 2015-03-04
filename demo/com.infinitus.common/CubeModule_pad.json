@@ -1,0 +1,11 @@
+{
+    "identifier": "com.infinitus.common.hd",
+    "name": "公共-Pad",
+
+    "build": 13,
+    "version": "1.0.1.3",
+    "releaseNote": "",
+
+    "dependencies": {
+    }
+}

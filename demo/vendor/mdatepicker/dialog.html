@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>对话框</title>
+<link rel="stylesheet" type="text/css" href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="css/dialog.css"/>
+<script data-main="date1" src="../../js/require.js"></script>
+<style type="text/css">
+       body {
+            font-family: arial, verdana, sans-serif;
+            font-size: 16px;
+        }
+
+        .demo {
+            display: none;
+        }
+
+		.button {
+			font-size: 17px;
+			margin-top: 10px;
+			width: 160px;
+		}
+		body>div{
+		background-image:-webkit-gradient(linear,left top,left bottom,from(#666),to(#222))
+		}
+</style>
+<script type="text/javascript">
+		function showMyDialog(theme) {
+			window.scrollers["dialog1"].init({theme:theme});
+			showDialog('dialog1');
+		}
+		function callback1(value) {
+			alert($("#input1",this.element).val());
+		}
+    </script>
+</head>
+
+<body >
+	 <dialog id="dialog1" title="对话框"  theme="default" width="200" display="modal" >
+	 </dialog>
+   
+</body>
+</html>
+

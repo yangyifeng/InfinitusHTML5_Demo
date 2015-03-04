@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <title>时间控件</title>
+
+    <script src="js/jquery-1.8.2.min.js"></script>
+    
+    <style type="text/css">
+        body {
+            font-family: arial, verdana, sans-serif;
+            font-size: 12px;
+        }
+
+        .demo {
+            display: none;
+        }
+    </style>
+
+    <script src="js/mdatepicker.core.js" type="text/javascript"></script>
+    <script src="js/mdatepicker.datetime.js" type="text/javascript"></script>    
+    <script src="js/mdatepicker.style.js" type="text/javascript"></script>
+
+
+
+    <link href="css/mdatepicker.core.css" rel="stylesheet" type="text/css" />
+    <link href="css/mdatepicker.jqm.css" rel="stylesheet" type="text/css" />
+    <link href="css/mdatepicker.android.css" rel="stylesheet" type="text/css" />
+    <link href="css/mdatepicker.android-ics.css" rel="stylesheet" type="text/css" />
+    <link href="css/mdatepicker.ios.css" rel="stylesheet" type="text/css" />
+    <link href="css/mdatepicker.sense-ui.css" rel="stylesheet" type="text/css" />
+    <link href="css/mdatepicker.wp.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/mdatepicker.animation.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        $(function () {
+            
+			$("date").each(function(){
+				var _this = $(this);
+				var _config = {
+				preset: 'date',
+				lang: 'zh',
+				dateOrder: 'yymmdd',
+				theme: 'android-ics light',
+				maxDate: new Date(2015, 12, 31, 59, 50),
+				};
+				//var id = _this.attr('id');
+				var atts = this.attributes, len = atts.length, att, i = 0 ;
+				for(; i < len ; i++){
+					att = atts[i];
+					if(att.specified){
+						_config[att.name] = att.value;
+					}
+				}
+				var dateItem = $("<input  />").attr("id", _config.id);
+				dateItem.appendTo(_this.parent());
+				_this.remove();
+				$(dateItem).scroller('destroy').scroller(_config);
+				//alert(_config.id);
+			});
+
+        });
+    </script>
+</head>
+
+<body>
+    <div data-role="page" data-theme="b">
+        <div data-role="header" data-theme="a">
+            <h1>时间控件</h1>
+        </div>
+
+        <div data-role="content" data-theme="d">
+
+		            
+			<div>
+				 <label for="date1">Android ICS Light</label>
+				 <date id="date1" theme="android-ics light" display="modal"/>
+			</div>
+
+			<div>
+				 <label for="date2">Default</label>
+				 <date id="date2" theme="default" display="modal"/>
+			</div>
+
+			<div>
+				 <label for="date3">IOS</label>
+				 <date id="date3" theme="ios" display="modal"/>
+			</div>
+
+			<div>
+				 <label for="date4">Android</label>
+				 <date id="date4" theme="android" display="modal"/>
+			</div>
+
+			<div>
+				 <label for="date5">jqm</label>
+				 <date id="date5" theme="jqm" display="modal"/>
+			</div>
+
+        </div>
+    </div>
+</body>
+</html>
+

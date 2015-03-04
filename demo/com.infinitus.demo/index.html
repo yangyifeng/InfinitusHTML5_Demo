@@ -1,0 +1,36 @@
+<!--手机客户端每次进去模块都首要访问的文件，只用默认配置就可以-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>主页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--width - viewport的宽度 height - viewport的高度,initial-scale - 初始的缩放比例,minimum-scale - 允许用户缩放到的最小比例,maximum-scale - 允许用户缩放到的最大比例,user-scalable - 用户是否可以手动缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--"添加到主屏幕“后,全屏显示-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--藏状态栏\ 说明:网站开启对web app程序的支持-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <!--module值必须和包的名字保持一致 enablePhoneGap设置是否可以和客户端进行通信-->
+    <meta name="launcher" module="com.infinitus.demo" hideaddressbar="true" preventtouchmove="true" enablephonegap="false" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+    <script type="text/javascript">
+        var require = {
+            urlArgs: "bust=" + (new Date()).getTime()
+        };
+    </script>
+    <script data-main="../vendor/cube/js/launcher" src="../vendor/lib/require.js"></script>
+    <script type="text/javascript" src="../infinitus.js"></script>
+    <script type="text/javascript" src="../com.infinitus.common/common.js"></script>
+    <link href="../com.infinitus.common/style.css" rel="stylesheet" />
+    <link href="./pag.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- add loading screen here, using html5 animation -->
+    <div id="appLoadingIndicator">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

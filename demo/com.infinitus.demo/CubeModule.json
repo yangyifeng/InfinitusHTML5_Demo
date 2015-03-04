@@ -1,0 +1,12 @@
+{
+    "identifier": "com.infinitus.demo",
+    "name": "样本",
+
+    "build": 1,
+    "version": "1.0.0.1",
+    "releaseNote": "",
+
+    "dependencies": {
+        "com.infinitus.common": 6
+    }
+}

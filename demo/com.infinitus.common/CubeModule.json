@@ -1,0 +1,11 @@
+{
+    "identifier": "com.infinitus.common",
+    "name": "公共",
+
+    "build": 9,
+    "version": "1.0.0.9",
+    "releaseNote": "",
+
+    "dependencies": {
+    }
+}
